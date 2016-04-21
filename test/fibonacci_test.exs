@@ -4,19 +4,23 @@ defmodule FibonacciTest do
   doctest Fibonacci
 
   test "test fib 1" do
-    assert Fibonacci.fib(1) == 1
+    {result, memo} = Fibonacci.fib(1)
+    assert result == 1
   end
 
   test "test fib 2" do
-    assert Fibonacci.fib(2) == 1
+    {result, memo} = Fibonacci.fib(2)
+    assert result == 1
   end
 
   test "test fib 3" do
-    assert Fibonacci.fib(3) == 2
+    {result, memo} = Fibonacci.fib(3)
+    assert result == 2
   end
 
   test "test fib 30" do
-    assert Fibonacci.fib(30) == 832040 
+    {result, memo} = Fibonacci.fib(30)
+    assert result == 832040
   end
 
   test "test fib 0" do

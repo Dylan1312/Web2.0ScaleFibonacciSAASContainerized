@@ -5,7 +5,8 @@ defmodule WebService.Handler do
 
     {param, req} = :cowboy_req.binding(:n, req)
     start_time = :os.system_time(:milli_seconds)
-    body = to_string(Fibonacci.fib(String.to_integer(param)))
+    {result, memo} = Fibonacci.fib(String.to_integer(param))
+    body = to_string(result)
     finish_time = :os.system_time(:milli_seconds)
     headers = [{"content-type", "text.plain" }, {"x_fib_time", to_string(finish_time-start_time)}]
     {:ok, resp} = :cowboy_req.reply(200, headers, body, req)
