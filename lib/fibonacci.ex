@@ -9,8 +9,8 @@ defmodule Fibonacci do
           raise ArgumentError, message: "argument must be greater than 0 and less than 100"
         a > 2 ->
           f1 = fib(a-2, memo)
-          Map.put(memo, a-2, f1)
-          f1 + fib(a-1, memo)
+          new_memo = Map.put(memo, a-2, f1)
+          f1 + fib(a-1, new_memo)
         true ->
           1
       end
