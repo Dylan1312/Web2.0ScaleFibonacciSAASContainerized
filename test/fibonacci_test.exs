@@ -15,8 +15,8 @@ defmodule FibonacciTest do
     assert Fibonacci.fib(3) == 2
   end
 
-  test "test fib 99" do
-    assert Fibonacci.fib(99) == 218922995834555169026
+  test "test fib 30" do
+    assert Fibonacci.fib(30) == 832040 
   end
 
   test "test fib 0" do
