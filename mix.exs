@@ -16,7 +16,7 @@ defmodule WebService.Mixfile do
 
   def application do
     [applications: [:logger, :cowboy],
-     mod: {HelloWorld, []}]
+     mod: {WebService, []}]
   end
 
   # Dependencies can be Hex packages:
