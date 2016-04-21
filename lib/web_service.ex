@@ -14,7 +14,8 @@ defmodule WebService do
 
   def run do 
     routes = [
-      {"/", WebService.Handler, []}
+    #      {"/", WebService.Handler, []},
+      {"/brag/fib/:n", WebService.Handler, []}
     ]
 
    # Let Cowboy know about our routes
